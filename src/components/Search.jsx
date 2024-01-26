@@ -1,4 +1,8 @@
+import { useGlobalContext } from "../Context";
+
 const Search = () => {
+  const context = useGlobalContext();
+  console.log(context);
   return (
     <div className="search-container">
       <form>
