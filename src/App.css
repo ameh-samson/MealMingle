@@ -99,36 +99,37 @@ h2 {
 
 /* search */
 
-/* Search */
 .search-container {
-  height: 5rem;
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 467px;
+  max-width: 80%;
+  margin: -20px auto;
+  z-index: 1;
+  position: relative;
 }
 
 .search-container form {
-  width: var(--view-width);
-  max-width: var(--max-width);
+  background: var(--white);
   display: flex;
-  gap: 0.5rem;
+  justify-content: space-around;
   flex-wrap: wrap;
+  border: 1px solid var(--grey-300);
+  border-radius: var(--borderRadius);
 }
 
 .search-container .form-input {
-  max-width: 200px;
-  padding: 0.375rem 0.75rem;
-  border-radius: var(--borderRadius);
-  background: var(--backgroundColor);
-  border: 1px solid var(--grey-200);
+  padding: 0.8rem 1rem;
+  border: none;
+  border-right: 1px solid var(--grey-300);
+  outline: none;
 }
 
 ::placeholder {
   font-family: inherit;
-  color: var(--grey-400);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--grey-500);
 }
 
-.search-container .btn {
-  font-size: 0.75rem;
+.btn-hipster {
+  border-left: 1px solid var(--grey-300);
 }
