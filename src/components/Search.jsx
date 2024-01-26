@@ -4,7 +4,7 @@ const Search = () => {
       <form>
         <input
           type="text"
-          placeholder="type favorite meal"
+          placeholder="Search for a meal"
           className="form-input"
           // value={text}
           // onChange={handleChange}
