@@ -22,9 +22,9 @@ html {
   --orange: #ffa500;
 
   /* background */
-  --backgroundColor: var(var(--white));
+  --backgroundColor: var(--white);
   --borderRadius: 0.25rem;
-  --text-color: var(var(--grey-500));
+  --text-color: var(--grey-500);
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
 
