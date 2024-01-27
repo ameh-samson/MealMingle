@@ -1,4 +1,5 @@
 import Search from "./Search";
+import { useGlobalContext } from "../Context";
 
 const Header = () => {
   return (
