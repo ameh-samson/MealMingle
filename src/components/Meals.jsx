@@ -6,11 +6,11 @@ const Meals = () => {
   // loading meal
   if (loading) {
     return (
-      <section className="section loading-section">
+      <div className="loading-section">
         <div class="loading-container">
           <div class="loading-circle"></div>
         </div>
-      </section>
+      </div>
     );
   }
 
