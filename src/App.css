@@ -53,6 +53,21 @@ h2 {
   font-weight: 700;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /* buttons */
 
 .btn {
@@ -142,4 +157,69 @@ button.btn {
   margin-top: 0.5rem;
   background: var(--grey-400);
   color: var(--white);
+}
+
+/*************************/
+/*         HEADER        */
+/*************************/
+
+.section,
+.section-center {
+  padding: 3rem 0;
+  width: 90vw;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-center {
+  display: grid;
+  gap: 2rem;
+}
+
+.meal-section {
+  margin-top: 2rem;
+}
+
+@media (min-width: 776px) {
+  .section-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .section-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.meal {
+  background: var(--white);
+  color: var(--textColor);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+}
+
+.meal:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.meal img {
+  height: 15rem;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+  cursor: pointer;
+}
+
+.meal h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.meal footer {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

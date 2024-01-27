@@ -4,28 +4,40 @@ import axios from "axios";
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
+  const [loading, setLoading] = useState(false);
   const [meals, setMeals] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // link to The meal DB API
-  const allMealsUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=a";
+  const allMealsUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
   const randomMealUrl = "https://www.themealdb.com/api/json/v1/1/random.php";
 
   //   set function to fetch meal
-  const fetchMeals = async (url) => {
+  const fetchMeal = async (url) => {
+    setLoading(true);
     try {
       const res = await axios.get(url);
-      setMeals(res.data.meals);
+      if (res.data.meals) {
+        setMeals(res.data.meals);
+      } else {
+        setMeals([]);
+      }
     } catch (err) {
       console.log(err);
     }
+    setLoading(false);
   };
 
   // fetch the meal data
   useEffect(() => {
-    fetchMeals(allMealsUrl);
-  }, []);
+    fetchMeal(`${allMealsUrl}${searchTerm}`);
+  }, [searchTerm]);
 
-  return <AppContext.Provider value={meals}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={{ meals, loading, setSearchTerm }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 export const useGlobalContext = () => {
