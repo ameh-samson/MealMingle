@@ -4,7 +4,7 @@ import { useGlobalContext } from "../Context";
 const Search = () => {
   const [text, setText] = useState("");
 
-  const { setSearchTerm } = useGlobalContext();
+  const { setSearchTerm, fetchRandomMeal } = useGlobalContext();
 
   const handleChange = (e) => {
     setText(e.target.value);
@@ -34,7 +34,7 @@ const Search = () => {
         <button
           type="button"
           className="btn btn-hipster"
-          // onClick={FetchRandomMeal}
+          onClick={fetchRandomMeal}
         >
           Random Meal
         </button>
