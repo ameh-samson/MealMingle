@@ -6,10 +6,6 @@ const Search = () => {
 
   const { setSearchTerm, fetchRandomMeal } = useGlobalContext();
 
-  const handleChange = (e) => {
-    setText(e.target.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text) {
@@ -26,7 +22,7 @@ const Search = () => {
           placeholder="Search for a meal"
           className="form-input"
           value={text}
-          onChange={handleChange}
+          onChange={(e) => setText(e.target.value)}
         />
         <button type="submit" className="btn">
           Search

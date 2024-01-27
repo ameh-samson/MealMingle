@@ -14,6 +14,17 @@ const Meals = () => {
     );
   }
 
+  // No meal found
+  if (meals.length < 1) {
+    return (
+      <section className="section">
+        <p style={{ textAlign: "center" }}>
+          No meal match your search. Please try again
+        </p>
+      </section>
+    );
+  }
+
   return (
     <section className="section-center meal-section">
       {meals.map((meal) => {
