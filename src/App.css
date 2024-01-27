@@ -118,7 +118,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1120px;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
@@ -166,8 +166,8 @@ button.btn {
 .section,
 .section-center {
   padding: 3rem 0;
-  width: 90vw;
-  max-width: 1120px;
+  width: 100%;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
