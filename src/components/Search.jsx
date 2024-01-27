@@ -36,7 +36,7 @@ const Search = () => {
           className="btn btn-hipster"
           // onClick={FetchRandomMeal}
         >
-          surprise me
+          Random Meal
         </button>
       </form>
     </div>
