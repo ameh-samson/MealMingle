@@ -6,8 +6,10 @@ const Meals = () => {
   // loading meal
   if (loading) {
     return (
-      <section className="section">
-        <h4>Loading.....</h4>
+      <section className="section loading-section">
+        <div class="loading-container">
+          <div class="loading-circle"></div>
+        </div>
       </section>
     );
   }

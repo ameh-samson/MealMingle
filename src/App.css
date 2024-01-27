@@ -89,6 +89,40 @@ img {
   box-shadow: var(--shadow-3);
 }
 
+/* loading */
+
+.loading-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.loading-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.loading-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px solid var(--grey-500);
+  border-top: 8px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* Adjust animation duration as needed */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* utility */
 .wrapper {
   padding: 78px 42px;
@@ -160,7 +194,7 @@ button.btn {
 }
 
 /*************************/
-/*         HEADER        */
+/*         Meal        */
 /*************************/
 
 .section,
