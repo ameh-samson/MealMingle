@@ -57,6 +57,10 @@ a {
   text-decoration: none;
 }
 
+.link-button {
+  color: var(--white);
+}
+
 ul {
   list-style-type: none;
   padding: 0;

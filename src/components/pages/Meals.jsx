@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../Context";
+import { useGlobalContext } from "../../Context";
 
 const Meals = () => {
   const { meals, loading } = useGlobalContext();
@@ -7,8 +7,8 @@ const Meals = () => {
   if (loading) {
     return (
       <div className="loading-section">
-        <div class="loading-container">
-          <div class="loading-circle"></div>
+        <div className="loading-container">
+          <div className="loading-circle"></div>
         </div>
       </div>
     );
