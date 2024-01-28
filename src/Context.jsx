@@ -40,7 +40,12 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ meals, loading, setSearchTerm, fetchRandomMeal }}
+      value={{
+        meals,
+        loading,
+        setSearchTerm,
+        fetchRandomMeal,
+      }}
     >
       {children}
     </AppContext.Provider>

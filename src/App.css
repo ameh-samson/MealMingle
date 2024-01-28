@@ -57,13 +57,17 @@ a {
   text-decoration: none;
 }
 
-.link-button {
-  color: var(--white);
-}
-
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+.link-button {
+  color: var(--white);
+  transition: var(--transition);
+}
+.link-button:hover {
+  color: var(--orange);
 }
 
 img {
