@@ -1,3 +1,4 @@
+import { FaHeart } from "react-icons/fa6";
 import { useGlobalContext } from "../../Context";
 
 const Meals = () => {
@@ -35,8 +36,11 @@ const Meals = () => {
 
             <footer>
               <h5>{title}</h5>
-              <button className="like-btn" onClick={() => addToFavorites(id)}>
-                +
+              <button
+                className="btn like-btn"
+                onClick={() => addToFavorites(id)}
+              >
+                <FaHeart />
               </button>
             </footer>
           </article>

@@ -256,6 +256,15 @@ button.btn {
   flex-wrap: wrap;
 }
 
+.meal button.like-btn {
+  background: transparent;
+  color: var(--black);
+}
+
+.meal button.like-btn:hover {
+  color: var(--red-dark);
+}
+
 /*************************/
 /*         Modal        */
 /*************************/
