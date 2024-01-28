@@ -14,11 +14,11 @@ html {
   /* colors */
 
   --white: #fff;
+  --red-dark: #6e0202;
   --grey-300: #d1d5db;
   --grey-400: #9ca3af;
   --grey-500: #6b7280;
   --grey-700: #374151;
-
   --orange: #ffa500;
 
   /* background */
@@ -254,4 +254,64 @@ button.btn {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+/*************************/
+/*         Modal        */
+/*************************/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.modal-container {
+  width: 80%;
+  background: var(--white);
+  max-width: 800px;
+  height: 80vh;
+  overflow: scroll;
+  border-radius: var(--borderRadius);
+}
+
+.modal-img {
+  height: 15rem;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
+}
+
+.modal-content {
+  padding: 1rem 1.5rem;
+}
+
+.modal-content p {
+  margin-top: 1rem;
+  text-align: justify;
+  color: var(--grey-600);
+  line-height: 1.4;
+}
+
+.modal-content a {
+  display: block;
+  color: var(--primary-500);
+  margin-block: 1rem;
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.modal-content a:hover {
+  color: var(--black);
+}
+
+.btn.close-btn {
+  background: var(--red-dark);
+  color: var(--white);
 }

@@ -1,7 +1,7 @@
 import { useGlobalContext } from "../../Context";
 
 const Meals = () => {
-  const { meals, loading } = useGlobalContext();
+  const { meals, loading, selectMeal } = useGlobalContext();
 
   // loading meal
   if (loading) {

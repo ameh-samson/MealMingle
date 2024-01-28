@@ -7,6 +7,8 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [meals, setMeals] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [selectedMeal, setSelectedMeal] = useState(null);
 
   // link to The meal DB API
   const allMealsUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
@@ -28,6 +30,21 @@ const AppProvider = ({ children }) => {
     setLoading(false);
   };
 
+  const selectMeal = (idMeal, favoriteMeal) => {
+    let meal;
+
+    meal = meals.find((meal) => meal.idMeal === idMeal);
+
+    setSelectedMeal(meal);
+    setShowModal(true);
+  };
+
+  console.log(showModal);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   // fetch random meal
   const fetchRandomMeal = () => {
     fetchMeal(randomMealUrl);
@@ -45,6 +62,10 @@ const AppProvider = ({ children }) => {
         loading,
         setSearchTerm,
         fetchRandomMeal,
+        showModal,
+        selectedMeal,
+        selectMeal,
+        closeModal,
       }}
     >
       {children}
