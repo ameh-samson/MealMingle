@@ -18,7 +18,7 @@ const Meals = () => {
   if (meals.length < 1) {
     return (
       <section className="section">
-        <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "center", color: "#6b7280" }}>
           No meal match your search. Please try again
         </p>
       </section>
