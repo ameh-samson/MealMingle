@@ -14,14 +14,14 @@ const Favorites = () => {
   }
 
   return (
-    <section className="section-center meal-section favorites">
+    <section className="favorites">
       <div className="meal favorites">
         <div className="favorites-container">
           {favorites.map((item) => {
             const { idMeal: id, strMealThumb: img } = item;
 
             return (
-              <div key={id} className="favorite-item">
+              <div key={id} className="favorite-item ">
                 <img
                   src={img}
                   className="favorite-img img"
