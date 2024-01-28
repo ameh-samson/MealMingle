@@ -2,7 +2,7 @@ import { FaHeart } from "react-icons/fa6";
 import { useGlobalContext } from "../../Context";
 
 const Meals = () => {
-  const { meals, loading, selectMeal } = useGlobalContext();
+  const { meals, loading, selectMeal, addToFavorites } = useGlobalContext();
 
   // loading meal
   if (loading) {
